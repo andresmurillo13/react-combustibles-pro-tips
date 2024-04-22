@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useStateContext } from '../contexts/ContextProvider';
 
-const Button = ({ icon, bgColor, color, bgHoverColor, size, text, borderRadius, width }) => {
+export const Button = ({ icon, bgColor, color, bgHoverColor, size, text, borderRadius, width }) => {
   const { setIsClicked, initialState } = useStateContext();
 
   return (

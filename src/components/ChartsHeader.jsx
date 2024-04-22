@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 
-const ChartsHeader = ({ category, title }) => (
+export const ChartsHeader = ({ category, title }) => (
   <div className=" mb-10">
     <div>
       <p className="text-lg text-gray-400">Chart</p>

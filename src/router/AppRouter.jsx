@@ -5,15 +5,15 @@ import { useAuthStore } from "../hooks"
 import { Loader } from "./components/Loader"
 import { routesPrev, routesNext } from "./routes"
 import { BrowserRouter } from 'react-router-dom';
-import { FiSettings } from 'react-icons/fi';
 import { useStateContext } from '../contexts/ContextProvider';
-import { Sidebar, Navbar, ThemeSettings } from '../components';
+
 import '../App.css';
+import { Navbar, Sidebar, ThemeSettings } from "../components"
 
 export const AppRouter = () => {
 
   const { status, checkAuthToken } = useAuthStore();
-  const { currentColor, setThemeSettings, activeMenu, themeSettings, currentMode } = useStateContext();
+  const { activeMenu, themeSettings, currentMode } = useStateContext();
 
   useEffect(() => {
     checkAuthToken();
@@ -33,20 +33,8 @@ export const AppRouter = () => {
 
           <BrowserRouter>
             <div className="flex relative dark:bg-main-dark-bg">
-              <div className="fixed right-4 bottom-4" style={{ zIndex: '1000' }}>
-               
-                  <button
-                    type="button"
-                    onClick={() => setThemeSettings(true)}
-                    style={{ background: currentColor, borderRadius: '50%' }}
-                    className="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray"
-                  >
-                    <FiSettings />
-                  </button>
 
-               
-              </div>
-              {activeMenu && status === 'authenticated' ?  (
+              {activeMenu && status === 'authenticated' ? (
                 <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white ">
                   <Sidebar />
                 </div>

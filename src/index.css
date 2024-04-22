@@ -1,19 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
-
-body{
-    margin: 0;
-    padding:0;
-    font-family: "Open Sans", sans-serif;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@media screen and (max-width:  768px) {
-    .calendar {
-      padding-top:  3rem;
-    }
-  }
-  
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+}
+
+body {
  
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+
+@media screen and (max-width: 768px) {
+  .calendar {
+    padding-top: 3rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .hide-on-small {
+    display: none;
+  }
+
+}
+
+@media (max-width: 1150px) {
+  .hide-on-medium {
+    display: none;
+  }
+
+}
+
+.loading-map {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  position: fixed;
+  top: 0;
+  left: 0;
+}

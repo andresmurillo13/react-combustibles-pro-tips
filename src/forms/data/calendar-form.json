@@ -1,0 +1,280 @@
+[
+    {
+        "type": "input",
+        "name": "idApplication",
+        "label": "Id",
+        "placeholder": "Id",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "date",
+        "name": "start",
+        "label": "Fecha Inicio",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "date",
+        "name": "end",
+        "label": "Fecha Fin",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "search",
+        "name": "buscar",
+        "placeholder": "Busca un equipo...",
+        "validations": [
+            {
+                "type": "required",
+                "results": true
+            }
+        ],
+        "label": "Buscar Equipo",
+        "value": ""
+    },
+    {
+        "type": "select",
+        "name": "results",
+        "label": "Seleccione Equipo",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "select",
+        "name": "tipoPlan",
+        "options": [
+            {
+                "id": 1,
+                "label": "Loma"
+            },
+            {
+                "id": 2,
+                "label": "Plano"
+            },
+            {
+                "id": 3,
+                "label": "Bajada"
+            }
+        ],
+        "label": "Tipo plan",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "select",
+        "name": "estado",
+        "label": "Estado",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ],
+        "options": [
+            {
+                "value": true,
+                "id": 1,
+                "label": "COMPLETADO"
+            },
+            {
+                "value": false,
+                "id": 2,
+                "label": "INCOMPLETO"
+            }
+        ]
+    },
+    {
+        "type": "button",
+        "name": "map",
+        "label": "Abre el mapa"
+    },
+    {
+        "type": "input",
+        "name": "refInicio",
+        "label": "Referencia Inicio",
+        "placeholder": "Referencia Inicio",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "input",
+        "name": "refFinal",
+        "label": "Referencia Final",
+        "placeholder": "Referencia Final",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "number",
+        "name": "kmRuta",
+        "placeholder": "Kilometros por ruta",
+        "label": "Km Ruta",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "number",
+        "name": "pesoCarga",
+        "label": "Peso de Carga",
+        "placeholder": "Peso de Carga",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "input",
+        "name": "eds",
+        "label": "EDS",
+        "placeholder": "EDS",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "number",
+        "name": "galones",
+        "label": "Galones",
+        "placeholder": "Galones",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "number",
+        "name": "valorGalones",
+        "label": "Valor Galones",
+        "placeholder": "Valor Galones",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "number",
+        "name": "odometro",
+        "label": "Odometro",
+        "placeholder": "Odometro",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "number",
+        "name": "valorTotalTrans",
+        "label": "Valor Total Trans",
+        "placeholder": "Valor Total Trans",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "number",
+        "name": "promedioRuta",
+        "label": "Promedio Ruta",
+        "placeholder": "Promedio Ruta",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "number",
+        "name": "consumoIdeal",
+        "label": "Consumo Ideal",
+        "placeholder": "Consumo Ideal",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "number",
+        "name": "perdidaGalones",
+        "label": "Perdida Galones",
+        "placeholder": "Perdida Galones",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "number",
+        "name": "medidaSensor1",
+        "label": "Medida Sensor 1",
+        "placeholder": "Medida Sensor 1",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "number",
+        "name": "medidaSensor2",
+        "label": "Medida Sensor 2",
+        "placeholder": "Medida Sensor 2",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    }
+]

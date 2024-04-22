@@ -1,0 +1,162 @@
+[
+    {
+        "type": "input",
+        "name": "name",
+        "label": "Nombre",
+        "placeholder": "Nombre",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "input",
+        "name": "modelo",
+        "label": "Modelo",
+        "placeholder": "Modelo",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "input",
+        "name": "placa",
+        "label": "Placa",
+        "placeholder": "Placa",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "input",
+        "name": "horasTrabajo",
+        "label": "Horas de Trabajo",
+        "placeholder": "Horas de Trabajo",
+        "value": "",
+        "validations": []
+    },
+    {
+        "type": "input",
+        "name": "kilometraje",
+        "label": "Kilometraje",
+        "placeholder": "Kilometraje",
+        "value": "",
+        "validations": []
+    },
+    {
+        "type": "input",
+        "name": "marcaMotor",
+        "label": "Marca del Motor",
+        "placeholder": "Marca del Motor",
+        "value": "",
+        "validations": []
+    },
+    {
+        "type": "input",
+        "name": "marcaVehiculo",
+        "label": "Marca del Vehículo",
+        "placeholder": "Marca del Vehículo",
+        "value": "",
+        "validations": []
+    },
+    {
+        "type": "input",
+        "name": "referenciaMotor",
+        "label": "Referencia del Motor",
+        "placeholder": "Referencia del Motor",
+        "value": "",
+        "validations": []
+    },
+    {
+        "type": "input",
+        "name": "img",
+        "label": "Imagen",
+        "placeholder": "Imagen",
+        "value": "",
+        "validations": []
+    },
+    {
+        "type": "input",
+        "name": "isActive",
+        "label": "isActive",
+        "placeholder": "isActive",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "input",
+        "name": "numeroMotor",
+        "label": "Número de Motor",
+        "placeholder": "Número de Motor",
+        "value": "",
+        "validations": []
+    },
+    {
+        "type": "input",
+        "name": "capacidadTanque1",
+        "label": "Capacidad del Tanque 1",
+        "placeholder": "Capacidad del Tanque 1",
+        "value": "",
+        "validations": []
+    },
+    {
+        "type": "input",
+        "name": "capacidadTanque2",
+        "label": "Capacidad del Tanque 2",
+        "placeholder": "Capacidad del Tanque 2",
+        "value": "",
+        "validations": []
+    },
+    {
+        "type": "input",
+        "name": "capacidadTanqueTotal",
+        "label": "Capacidad Total del Tanque",
+        "placeholder": "Capacidad Total del Tanque",
+        "value": "",
+        "validations": []
+    },
+    {
+        "type": "input",
+        "name": "vin",
+        "label": "VIN",
+        "placeholder": "VIN",
+        "value": "",
+        "validations": []
+    },
+    {
+        "type": "input",
+        "name": "peso",
+        "label": "Peso",
+        "placeholder": "Peso",
+        "value": "",
+        "validations": []
+    },
+    {
+        "type": "input",
+        "name": "configuracion",
+        "label": "Configuración",
+        "placeholder": "Configuración",
+        "value": "",
+        "validations": []
+    },
+    {
+        "type": "input",
+        "name": "conductores",
+        "label": "Conductores",
+        "placeholder": "Conductores",
+        "value": "",
+        "validations": []
+    }
+]

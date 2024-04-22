@@ -4,7 +4,7 @@ import { BsCheck } from 'react-icons/bs';
 import { themeColors } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
 
-const ThemeSettings = () => {
+export const ThemeSettings = () => {
   const { setColor, setMode, currentMode, currentColor, setThemeSettings } = useStateContext();
 
   return (

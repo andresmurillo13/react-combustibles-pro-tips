@@ -1,14 +1,12 @@
 
 import { Link, NavLink } from 'react-router-dom';
-import { SiShopware } from 'react-icons/si';
 import { MdOutlineCancel } from 'react-icons/md';
-
 import { useStateContext } from '../contexts/ContextProvider';
 import { routesNext } from '../router/routes';
 
 
 
-const Sidebar = () => {
+export const Sidebar = () => {
   const { currentColor, activeMenu, setActiveMenu, screenSize } = useStateContext();
 
   const handleCloseSideBar = () => {
@@ -18,17 +16,20 @@ const Sidebar = () => {
   };
 
 
-
   const activeLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg  text-white  text-md m-2';
   const normalLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2';
 
   return (
-    <div className="ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10">
+    <div className="ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-">
       {activeMenu && (
         <>
           <div className="flex justify-between items-center">
             <Link to="/" onClick={handleCloseSideBar} className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900">
-              <SiShopware /> <span>MASA</span>
+              <div className="space-y-4">
+                <img src="../public/images/logo.svg" alt="drivstoff" />
+                <p className="font-medium text-lg text-gray-600 text-cente dark:text-white">Control de Combustibles</p>
+              </div>
+
             </Link>
 
             <button
@@ -42,28 +43,28 @@ const Sidebar = () => {
 
           </div>
           <div className="mt-10 ">
-            {routesNext.map((item) => (
-              <div key={item.title}>
+            {routesNext.map(({ path, icon: Icon, to, name, title }) => (
+              <div key={path}>
                 <p className="text-gray-400 dark:text-gray-400 m-3 mt-4 uppercase">
-                  {item.title}
+                  {title}
                 </p>
-                {routesNext.map(({ path, icon: Icon, to, name }) => (
-                  <NavLink
-                    to={to}
-                    key={path}
-                    onClick={handleCloseSideBar}
-                    style={({ isActive }) => ({
-                      backgroundColor: isActive ? currentColor : '',
-                    })}
-                    className={({ isActive }) => (isActive ? activeLink : normalLink)}
-                  >
-                    {<Icon />}
-                    <span className="capitalize ">{name}</span>
-                  </NavLink>
-                ))}
+                <NavLink
+                  to={to}
+                  key={path}
+                  onClick={handleCloseSideBar}
+                  style={({ isActive }) => ({
+                    backgroundColor: isActive ? currentColor : '',
+                  })}
+                  className={({ isActive }) => (isActive ? activeLink : normalLink)}
+                >
+                  {<Icon />}
+                  <span className="capitalize ">{name}</span>
+                </NavLink>
               </div>
+
             ))}
           </div>
+
         </>
       )}
     </div>

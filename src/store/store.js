@@ -1,7 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import {
     authSlice,
-
+    equipmentSlice,
+    paginationSlice,
+    searchSlice,
+    uiSlice,
+    aplicationSlice
 } from './';
 
 
@@ -9,7 +13,11 @@ import {
 export const store = configureStore({
     reducer: {
         auth: authSlice.reducer,
-
+        aplication: aplicationSlice.reducer,
+        equipment: equipmentSlice.reducer,
+        pages: paginationSlice.reducer,
+        ui: uiSlice.reducer,
+        results: searchSlice.reducer,
 
 
     },

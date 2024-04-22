@@ -1,14 +1,13 @@
 import { MdOutlineCancel } from 'react-icons/md';
-
-import { Button } from '.';
 import { userProfileData } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
 import avatar from '../data/userdefault.png';
 import { useAuthStore } from '../hooks';
+import Button from './Button';
 
-const UserProfile = () => {
+export const UserProfile = () => {
   const { currentColor } = useStateContext();
-  const { user } = useAuthStore()
+  const { user, startLogout } = useAuthStore()
 
   return (
     <div className="nav-item absolute right-1 top-16 bg-white dark:bg-[#42464D] p-8 rounded-lg w-auto">
@@ -52,7 +51,7 @@ const UserProfile = () => {
           </div>
         ))}
       </div>
-      <div className="mt-5">
+      <div className="mt-5" onClick={startLogout}>
         <Button
           color="white"
           bgColor={currentColor}

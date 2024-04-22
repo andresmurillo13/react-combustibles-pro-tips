@@ -1,0 +1,167 @@
+[
+    {
+        "type": "input",
+        "name": "email",
+        "label": "Email",
+        "placeholder": "Email",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "password",
+        "name": "password",
+        "label": "Contraseña",
+        "placeholder": "Contraseña",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "password",
+        "name": "password2",
+        "label": "Repita Contraseña",
+        "placeholder": "Repita Contraseña",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "input",
+        "name": "fullName",
+        "label": "Nombre Completo",
+        "placeholder": "Nombre completo",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "input",
+        "name": "cargo",
+        "label": "Cargo",
+        "placeholder": "Cargo",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "input",
+        "name": "telefono",
+        "label": "Telefono",
+        "value": "",
+        "placeholder": "Telefono",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "input",
+        "name": "jefeInmediato",
+        "label": "Jefe Inmediato",
+        "placeholder": "Jefe Inmediato",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type": "select",
+        "name": "isActive",
+        "label": "Estado",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ],
+        "options": [
+            {
+                "value": true,
+                "id": 1,
+                "label": "ACTIVO"
+            },
+            {
+                "value": false,
+                "id": 2,
+                "label": "INACTIVO"
+            }
+        ]
+    },
+    {
+        "type": "select",
+        "name": "residencia",
+        "label": "Ciudad",
+        "validations": [
+            {
+                "type": "required"
+            }
+        ],
+        "options": [
+            {
+                "id": 1,
+                "label": "neiva"
+            },
+            {
+                "id": 2,
+                "label": "florencia"
+            }
+        ]
+    },
+    {
+        "type": "select",
+        "name": "selectRoles",
+        "label": "Roles",
+        "validations": [
+            {
+                "type": "unique"
+            }
+        ],
+        "options": [
+            {
+                "id": 1,
+                "label": "admin"
+            },
+            {
+                "id": 2,
+                "label": "user"
+            },
+            {
+                "id": 3,
+                "label": "superadmin"
+            }
+        ]
+    },
+    {
+        "type": "roles",
+        "name": "roles",
+        "label": "Roles",
+        "value": [
+            "user"
+        ],
+        "placeholder": "Roles",
+        "validations": [
+            {
+                "type": "array"
+               
+            }
+        ]
+    }
+]

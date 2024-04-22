@@ -50,9 +50,9 @@ export const LoginPage = () => {
                 <div className="m-auto py-12 px-6 sm:pr-20 xl:w-10/12">
                     <div className="space-y-4">
                         <a href="">
-                            <img src="../public/images/logo.svg" className="w-40" alt="tailus logo" />
+                            <img src="../public/images/logo.svg" className="w-45" alt="drivstoff" />
                         </a>
-                        <p className="font-medium text-lg text-gray-600">Control de Combustibles</p>
+                        <p className=" text-lg text-black text-center font-extrabold ">Bienvenidos al Control de Combustibles</p>
                     </div>
 
                     <div className="mt-12 grid gap-6 sm:grid-cols-2">
@@ -65,7 +65,7 @@ export const LoginPage = () => {
                         <div>
                             <input
                                 type="email"
-                                placeholder="Your Email"
+                                placeholder="Correo electronico"
                                 autoComplete="username"
                                 className="w-full py-3 px-6 ring-1 ring-gray-300 rounded-xl placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400 focus:invalid:outline-none"
                                 name="loginEmail"
@@ -78,7 +78,7 @@ export const LoginPage = () => {
                             <input
                                 type="password"
                                 autoComplete="current-password"
-                                placeholder="What's the secret word ?"
+                                placeholder="Contraseña"
                                 name='loginPassword'
                                 value={loginPassword}
                                 className="w-full py-3 px-6 ring-1 ring-gray-300 rounded-xl placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400 focus:invalid:outline-none"
@@ -91,14 +91,14 @@ export const LoginPage = () => {
 
                         <div>
                             <button className="w-full px-6 py-3 rounded-xl bg-sky-500 transition hover:bg-sky-600 focus:bg-sky-600 active:bg-sky-800">
-                                <span className="font-semibold text-white text-lg">Login</span>
+                                <span className="font-semibold text-white text-lg">Ingresa</span>
                             </button>
                         </div>
                     </form>
 
                     <div className="border-t pt-12">
                         <div className="space-y-2 text-center">
-                            <img src="../public/images/logo.svg" className="w-40 m-auto grayscale" alt="" />
+                            <img src="../public/images/logo.svg" className="h-13 m-auto " alt="" />
                             <span className="block text-sm tracking-wide text-gray-500">
                                 Software Control de Combustibles
                             </span>

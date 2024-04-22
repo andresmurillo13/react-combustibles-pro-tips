@@ -6,52 +6,50 @@ export const authSlice = createSlice({
         status: 'checking',
         user: {
         },
-        isLoadingEmpleados: true,
-        activeEmpleado: null,
-        empleados: [],
+        isLoadingEmployees: true,
+        activeEmployeed: null,
+        employees: [],
         errorMessage: undefined,
     },
     reducers: {
-        searchEmpleados: (state, { payload }) => {
 
-            state.empleadosEncontrados = payload;
-        },
-        clearEmpleadosEncontrados: (state) => {
-            state.empleadosEncontrados = [];
+        onSetActiveEmployeed: (state, { payload }) => {
+            state.activeEmployeed = payload;
         },
 
-        onSetActiveEmpleados: (state, { payload }) => {
-            state.activeEmpleado = payload;
-
+        onLoadEmployees: (state, action) => {
+            state.isLoadingEmployees = false;
+            state.employees = action.payload;
         },
+        onDeleteEmployeed: (state) => {
+            if (state.activeEmployeed) {
+                state.employees = state.employees.map(employeed => {
+                    if (employeed.id === state.activeEmployeed.id) {
 
-        onLoadEmpleados: (state, action) => {
-            state.isLoadingEmpleados = false;
-            state.empleados = action.payload;
-
-        },
-        onDeleteEmpleados: (state) => {
-            if (state.activeEmpleado) {
-                state.empleados = state.empleados.filter(event => event.uid !== state.activeEmpleado.uid);
-                state.activeEmpleado = null;
+                        return { ...employeed, isActive: false };
+                    } else {
+                        return employeed;
+                    }
+                });
+                state.activeEmployeed = null;
             }
         },
-        onUpdateEmpleados: (state, { payload }) => {
-            state.empleados = state.empleados.map(event => {
-                if (event.uid === payload.uid) {
+        onUpdateEmployeed: (state, { payload }) => {
+            state.employees = state.employees.map(employeed => {
+                if (employeed.id === payload.id) {
                     return payload;
                 }
 
-                return event;
+                return employeed;
             });
         },
 
-        onSaveEmpleados: (state, { payload }) => {
-            state.empleados.push(payload);
+        onSaveEmployeed: (state, { payload }) => {
+            state.employees.push(payload);
 
         },
-        onDesactiveEmpleado: (state) => {
-            state.activeEmpleado = null;
+        onDesactiveEmployeed: (state) => {
+            state.activeEmployeed = null;
         },
 
 
@@ -66,19 +64,15 @@ export const authSlice = createSlice({
             state.user = payload;
             state.errorMessage = undefined;
 
-
-
         },
-        onLogoutEmpleados: (state) => {
-            state.isLoadingEmpleados = true
-            state.activeEmpleado = null
-            state.empleados = []
-         
-        },
+
         onLogout: (state, { payload }) => {
             state.status = 'not-authenticated';
             state.user = {};
             state.errorMessage = payload;
+            state.isLoadingEmployees = true
+            state.activeEmployeed = null
+            state.employees = []
         },
         clearErrorMessage: (state) => {
             state.errorMessage = undefined;
@@ -91,13 +85,13 @@ export const { onChecking,
     onLogin,
     onLogout,
     clearErrorMessage,
-    onLoadEmpleados,
-    onSaveEmpleados,
-    onSetActiveEmpleados,
-    onDeleteEmpleados,
-    onUpdateEmpleados,
-    onLogoutEmpleados,
-    searchEmpleados,
-    onDesactiveEmpleado,
-    clearEmpleadosEncontrados
+    onLoadEmployees,
+    onSaveEmployeed,
+    onSetActiveEmployeed,
+    onDeleteEmployeed,
+    onUpdateEmployeed,
+    onLogoutEmployees,
+    searchEmployees,
+    onDesactiveEmployeed,
+    clearEmployeesFind
 } = authSlice.actions;
